@@ -1,0 +1,186 @@
+.awardSpotlight {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 36px 40px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.06) 0%, rgba(13, 18, 40, 0.8) 100%);
+  border: 1px solid rgba(250, 204, 21, 0.25);
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.awardGlow {
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.awardShine {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(250, 204, 21, 0.03), transparent);
+  pointer-events: none;
+}
+
+.awardIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.3);
+  flex-shrink: 0;
+  animation: pulse-glow-gold 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow-gold {
+  0%, 100% { box-shadow: 0 0 20px rgba(250, 204, 21, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(250, 204, 21, 0.5), 0 0 80px rgba(250, 204, 21, 0.15); }
+}
+
+.awardEyebrow {
+  font-size: 0.78rem;
+  color: #facc15;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+
+.awardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.awardDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.certsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.certCard {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.certTopLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  opacity: 0.7;
+}
+
+.certIconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certTitle {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.certIssuer {
+  font-size: 0.8rem;
+  color: var(--cert-color, var(--accent-cyan));
+  font-weight: 600;
+}
+
+.certDate {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-code);
+  margin-top: auto;
+}
+
+.eduCard {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 32px;
+}
+
+.eduIconWrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.eduEyebrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.eduDegree {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.eduSchool {
+  font-size: 0.88rem;
+  color: #10b981;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.eduLocation {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 1024px) {
+  .certsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .certsGrid { grid-template-columns: 1fr; }
+  .awardSpotlight { flex-direction: column; padding: 28px 24px; }
+  .eduCard { flex-direction: column; align-items: flex-start; }
+}
