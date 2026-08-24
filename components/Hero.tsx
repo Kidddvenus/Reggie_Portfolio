@@ -2,6 +2,7 @@
 import { Suspense, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import styles from "./Hero.module.css";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -71,8 +72,9 @@ export default function Hero() {
 
       {/* Content */}
       <div className={styles.content}>
-        {/* Location badge */}
-        <motion.div
+        <div className={styles.textContent}>
+          {/* Location badge */}
+          <motion.div
           className={styles.locationBadge}
           variants={fadeUp}
           initial="hidden"
@@ -167,6 +169,25 @@ export default function Hero() {
           <a href="tel:+254705079949" className={styles.socialLink} aria-label="Phone">
             <Phone size={18} /><span>Call</span>
           </a>
+        </motion.div>
+        </div>
+
+        {/* Profile Image */}
+        <motion.div
+          className={styles.imageWrapper}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.8}
+        >
+          <Image 
+            src="/profile.jpeg" 
+            alt="Reggie Omondi" 
+            width={400} 
+            height={400} 
+            priority
+            className={styles.profileImage}
+          />
         </motion.div>
       </div>
 
