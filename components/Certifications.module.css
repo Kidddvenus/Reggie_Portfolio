@@ -5,10 +5,11 @@
   gap: 28px;
   padding: 36px 40px;
   border-radius: 20px;
-  background: linear-gradient(135deg, rgba(250, 204, 21, 0.06) 0%, rgba(13, 18, 40, 0.8) 100%);
+  background: var(--bg-card);
   border: 1px solid rgba(250, 204, 21, 0.25);
   overflow: hidden;
   margin-bottom: 48px;
+  box-shadow: 0 4px 32px rgba(250, 204, 21, 0.06);
 }
 
 .awardGlow {

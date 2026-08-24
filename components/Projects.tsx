@@ -203,7 +203,7 @@ export default function Projects() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="projects" className="section" ref={ref} style={{ background: "var(--bg-secondary)" }}>
+    <section id="projects" className="section" ref={ref} style={{ background: "var(--section-alt-bg)" }}>
       <div className="bg-orb bg-orb-purple" style={{ width: 500, height: 500, bottom: "-10%", right: "-10%" }} />
 
       <div className="section-inner">

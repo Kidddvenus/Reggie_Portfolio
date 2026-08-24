@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap');
 
-/* ─── CSS Variables ─── */
-:root {
+/* ─── CSS Variables — Dark Theme (default) ─── */
+:root,
+[data-theme='dark'] {
   --bg-primary: #050816;
   --bg-secondary: #090d1f;
   --bg-card: rgba(13, 18, 40, 0.8);
+  --bg-card-solid: #0d1228;
   --accent-purple: #7c3aed;
   --accent-cyan: #06b6d4;
   --accent-pink: #ec4899;
@@ -14,13 +16,47 @@
   --text-muted: #475569;
   --border-glow: rgba(124, 58, 237, 0.3);
   --border-cyan: rgba(6, 182, 212, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.08);
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-code: 'Fira Code', monospace;
   --glow-purple: 0 0 30px rgba(124, 58, 237, 0.4), 0 0 60px rgba(124, 58, 237, 0.15);
   --glow-cyan: 0 0 30px rgba(6, 182, 212, 0.4), 0 0 60px rgba(6, 182, 212, 0.15);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --nav-bg: rgba(5, 8, 22, 0.85);
+  --card-hover-border: rgba(124, 58, 237, 0.6);
+  --input-bg: rgba(255, 255, 255, 0.03);
+  --input-border: rgba(255, 255, 255, 0.1);
+  --noise-opacity: 0.03;
+  --section-alt-bg: var(--bg-secondary);
 }
+
+/* ─── CSS Variables — Light Theme ─── */
+[data-theme='light'] {
+  --bg-primary: #f8faff;
+  --bg-secondary: #eef2ff;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-solid: #ffffff;
+  --accent-purple: #6d28d9;
+  --accent-cyan: #0891b2;
+  --accent-pink: #db2777;
+  --accent-green: #059669;
+  --text-primary: #0f172a;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
+  --border-glow: rgba(109, 40, 217, 0.2);
+  --border-cyan: rgba(8, 145, 178, 0.2);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --glow-purple: 0 4px 24px rgba(109, 40, 217, 0.18), 0 1px 4px rgba(109, 40, 217, 0.1);
+  --glow-cyan: 0 4px 24px rgba(8, 145, 178, 0.18), 0 1px 4px rgba(8, 145, 178, 0.1);
+  --nav-bg: rgba(248, 250, 255, 0.9);
+  --card-hover-border: rgba(109, 40, 217, 0.4);
+  --input-bg: rgba(0, 0, 0, 0.02);
+  --input-border: rgba(0, 0, 0, 0.12);
+  --noise-opacity: 0.015;
+  --section-alt-bg: #eef2ff;
+}
+
 
 /* ─── Reset & Base ─── */
 *, *::before, *::after {
@@ -41,6 +77,12 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   cursor: none;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Smooth theme transitions on all elements */
+*, *::before, *::after {
+  transition: background-color 0.4s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* ─── Custom Cursor ─── */
@@ -150,9 +192,31 @@ a {
 }
 
 .glass-card:hover {
-  border-color: rgba(124, 58, 237, 0.6);
+  border-color: var(--card-hover-border);
   box-shadow: var(--glow-purple);
   transform: translateY(-4px);
+}
+
+/* Light theme: stronger shadow instead of neon glow on cards */
+[data-theme='light'] .glass-card {
+  box-shadow: 0 2px 16px rgba(109, 40, 217, 0.06);
+}
+
+[data-theme='light'] .glass-card-cyan {
+  box-shadow: 0 2px 16px rgba(8, 145, 178, 0.06);
+}
+
+/* Light theme bg-orbs are more subtle */
+[data-theme='light'] .bg-orb-purple {
+  background: radial-gradient(circle, rgba(109, 40, 217, 0.1), transparent 70%);
+}
+
+[data-theme='light'] .bg-orb-cyan {
+  background: radial-gradient(circle, rgba(8, 145, 178, 0.08), transparent 70%);
+}
+
+[data-theme='light'] .bg-orb-pink {
+  background: radial-gradient(circle, rgba(219, 39, 119, 0.07), transparent 70%);
 }
 
 .glass-card-cyan {
@@ -229,7 +293,7 @@ a {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.03;
+  opacity: var(--noise-opacity, 0.03);
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 

@@ -35,8 +35,8 @@
   border-radius: 16px;
   padding: 28px 24px;
   overflow: hidden;
-  background: rgba(13, 18, 40, 0.9);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--bg-card-solid, #0d1228);
+  border: 1px solid var(--border-subtle);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -50,7 +50,7 @@
 
 .cardBack {
   transform: rotateY(180deg);
-  background: rgba(8, 12, 30, 0.97);
+  background: var(--bg-card-solid, #08091e);
   border-color: var(--proj-color, var(--accent-purple));
 }
 
@@ -140,7 +140,7 @@
   padding: 3px 10px;
   border-radius: 100px;
   border: 1px solid;
-  background: rgba(255,255,255,0.02);
+  background: var(--input-bg);
 }
 
 .tagMore {
@@ -148,7 +148,7 @@
   color: var(--text-muted);
   padding: 3px 10px;
   border-radius: 100px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid var(--border-subtle);
 }
 
 .hoverHint {
@@ -206,8 +206,8 @@
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--text-secondary);
-  border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-subtle);
+  background: var(--input-bg);
   transition: all 0.3s ease;
   cursor: pointer;
 }

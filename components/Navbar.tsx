@@ -1,7 +1,9 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, useScroll } from "framer-motion";
 import styles from "./Navbar.module.css";
+import { useTheme } from "./ThemeProvider";
+import { Sun, Moon } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -17,6 +19,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("");
   const { scrollY } = useScroll();
+  const { theme, toggle } = useTheme();
 
   useEffect(() => {
     const unsub = scrollY.on("change", (v) => setScrolled(v > 50));
@@ -60,6 +63,26 @@ export default function Navbar() {
           ))}
         </ul>
 
+        {/* Theme toggle */}
+        <motion.button
+          className={styles.themeToggle}
+          onClick={toggle}
+          aria-label="Toggle theme"
+          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.05 }}
+          title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          <motion.span
+            key={theme}
+            initial={{ rotate: -30, opacity: 0, scale: 0.7 }}
+            animate={{ rotate: 0, opacity: 1, scale: 1 }}
+            exit={{ rotate: 30, opacity: 0 }}
+            transition={{ duration: 0.25 }}
+          >
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          </motion.span>
+        </motion.button>
+
         {/* CTA */}
         <a
           className={`btn-primary ${styles.cta}`}
@@ -97,6 +120,16 @@ export default function Navbar() {
               </button>
             </li>
           ))}
+          {/* Theme toggle in mobile menu too */}
+          <li>
+            <button
+              className={`${styles.mobileLink} ${styles.mobilethemeToggle}`}
+              onClick={toggle}
+            >
+              {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+              {theme === "dark" ? "Light Mode" : "Dark Mode"}
+            </button>
+          </li>
         </ul>
       </motion.div>
     </motion.nav>

@@ -106,7 +106,7 @@ export default function Skills() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="skills" className="section" ref={ref} style={{ background: "var(--bg-secondary)" }}>
+    <section id="skills" className="section" ref={ref} style={{ background: "var(--section-alt-bg)" }}>
       <div className="bg-orb bg-orb-purple" style={{ width: 500, height: 500, top: "50%", left: "-15%", transform: "translateY(-50%)" }} />
 
       <div className="section-inner">

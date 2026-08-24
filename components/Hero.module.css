@@ -5,6 +5,7 @@
   align-items: center;
   overflow: hidden;
   background: var(--bg-primary);
+  transition: background 0.4s ease;
 }
 
 .canvasWrapper {
@@ -172,7 +173,7 @@
   font-size: 0.82rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  background: rgba(255,255,255,0.02);
+  background: var(--input-bg);
 }
 
 .socialLink:hover {
