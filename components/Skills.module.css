@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--group-color, var(--accent-purple));
+  background: var(--group-color, var(--accent-green));
   opacity: 0.7;
 }
 

@@ -186,7 +186,7 @@
 
 .field input:focus,
 .field textarea:focus {
-  border-color: var(--accent-purple);
+  border-color: var(--accent-green);
   background: rgba(124, 58, 237, 0.05);
   box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
 }

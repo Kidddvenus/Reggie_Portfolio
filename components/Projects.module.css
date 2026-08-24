@@ -45,13 +45,13 @@
 }
 
 .cardFront:hover {
-  border-color: var(--proj-color, var(--accent-purple));
+  border-color: var(--proj-color, var(--accent-green));
 }
 
 .cardBack {
   transform: rotateY(180deg);
   background: var(--bg-card-solid, #08091e);
-  border-color: var(--proj-color, var(--accent-purple));
+  border-color: var(--proj-color, var(--accent-green));
 }
 
 .cardBorder {

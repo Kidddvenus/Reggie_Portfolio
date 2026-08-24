@@ -204,7 +204,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="section" ref={ref} style={{ background: "var(--section-alt-bg)" }}>
-      <div className="bg-orb bg-orb-purple" style={{ width: 500, height: 500, bottom: "-10%", right: "-10%" }} />
+      <div className="bg-orb bg-orb-green" style={{ width: 500, height: 500, bottom: "-10%", right: "-10%" }} />
 
       <div className="section-inner">
         <motion.div

@@ -115,7 +115,7 @@
 .typewriter {
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 700;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -201,7 +201,7 @@
 .scrollLine {
   width: 1px;
   height: 50px;
-  background: linear-gradient(180deg, var(--accent-purple), transparent);
+  background: linear-gradient(180deg, var(--accent-green), transparent);
   animation: scroll-line 2s ease-in-out infinite;
 }
 

@@ -7,7 +7,7 @@
   --bg-secondary: #090d1f;
   --bg-card: rgba(13, 18, 40, 0.8);
   --bg-card-solid: #0d1228;
-  --accent-purple: #7c3aed;
+  --accent-green: #7c3aed;
   --accent-cyan: #06b6d4;
   --accent-pink: #ec4899;
   --accent-green: #10b981;
@@ -20,7 +20,7 @@
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-code: 'Fira Code', monospace;
-  --glow-purple: 0 0 30px rgba(124, 58, 237, 0.4), 0 0 60px rgba(124, 58, 237, 0.15);
+  --glow-green: 0 0 30px rgba(124, 58, 237, 0.4), 0 0 60px rgba(124, 58, 237, 0.15);
   --glow-cyan: 0 0 30px rgba(6, 182, 212, 0.4), 0 0 60px rgba(6, 182, 212, 0.15);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --nav-bg: rgba(5, 8, 22, 0.85);
@@ -37,7 +37,7 @@
   --bg-secondary: #eef2ff;
   --bg-card: rgba(255, 255, 255, 0.85);
   --bg-card-solid: #ffffff;
-  --accent-purple: #6d28d9;
+  --accent-green: #6d28d9;
   --accent-cyan: #0891b2;
   --accent-pink: #db2777;
   --accent-green: #059669;
@@ -47,7 +47,7 @@
   --border-glow: rgba(109, 40, 217, 0.2);
   --border-cyan: rgba(8, 145, 178, 0.2);
   --border-subtle: rgba(0, 0, 0, 0.08);
-  --glow-purple: 0 4px 24px rgba(109, 40, 217, 0.18), 0 1px 4px rgba(109, 40, 217, 0.1);
+  --glow-green: 0 4px 24px rgba(109, 40, 217, 0.18), 0 1px 4px rgba(109, 40, 217, 0.1);
   --glow-cyan: 0 4px 24px rgba(8, 145, 178, 0.18), 0 1px 4px rgba(8, 145, 178, 0.1);
   --nav-bg: rgba(248, 250, 255, 0.9);
   --card-hover-border: rgba(109, 40, 217, 0.4);
@@ -116,7 +116,7 @@ body:hover .cursor { opacity: 1; }
 /* ─── Scrollbar ─── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--accent-purple), var(--accent-cyan)); border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--accent-green), var(--accent-cyan)); border-radius: 10px; }
 
 /* ─── Typography ─── */
 h1, h2, h3, h4, h5, h6 {
@@ -132,7 +132,7 @@ a {
 
 /* ─── Gradient Text ─── */
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-cyan) 50%, var(--accent-pink) 100%);
+  background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-cyan) 50%, var(--accent-pink) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -193,7 +193,7 @@ a {
 
 .glass-card:hover {
   border-color: var(--card-hover-border);
-  box-shadow: var(--glow-purple);
+  box-shadow: var(--glow-green);
   transform: translateY(-4px);
 }
 
@@ -207,7 +207,7 @@ a {
 }
 
 /* Light theme bg-orbs are more subtle */
-[data-theme='light'] .bg-orb-purple {
+[data-theme='light'] .bg-orb-green {
   background: radial-gradient(circle, rgba(109, 40, 217, 0.1), transparent 70%);
 }
 
@@ -239,7 +239,7 @@ a {
   align-items: center;
   gap: 10px;
   padding: 14px 32px;
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+  background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
   border-radius: 50px;
   font-weight: 600;
   font-size: 0.95rem;
@@ -256,7 +256,7 @@ a {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -306,7 +306,7 @@ a {
   z-index: 0;
 }
 
-.bg-orb-purple {
+.bg-orb-green {
   background: radial-gradient(circle, rgba(124, 58, 237, 0.25), transparent 70%);
 }
 
@@ -322,7 +322,7 @@ a {
 .divider {
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+  background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));
   border-radius: 2px;
   margin-bottom: 40px;
 }
@@ -335,7 +335,7 @@ a {
 }
 
 .animated-border {
-  background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan), var(--accent-pink), var(--accent-purple));
+  background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan), var(--accent-pink), var(--accent-green));
   background-size: 300% 300%;
   animation: border-spin 4s ease infinite;
 }

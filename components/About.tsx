@@ -43,7 +43,7 @@ export default function About() {
   return (
     <section id="about" className="section" ref={ref}>
       {/* Bg orbs */}
-      <div className="bg-orb bg-orb-purple" style={{ width: 400, height: 400, top: "10%", right: "-10%" }} />
+      <div className="bg-orb bg-orb-green" style={{ width: 400, height: 400, top: "10%", right: "-10%" }} />
       <div className="bg-orb bg-orb-cyan" style={{ width: 300, height: 300, bottom: "5%", left: "-5%" }} />
 
       <div className="section-inner">

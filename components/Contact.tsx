@@ -40,7 +40,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section" ref={ref}>
-      <div className="bg-orb bg-orb-purple" style={{ width: 500, height: 500, top: "20%", right: "-15%" }} />
+      <div className="bg-orb bg-orb-green" style={{ width: 500, height: 500, top: "20%", right: "-15%" }} />
       <div className="bg-orb bg-orb-cyan" style={{ width: 350, height: 350, bottom: "10%", left: "-10%" }} />
 
       <div className="section-inner">

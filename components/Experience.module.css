@@ -49,7 +49,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: var(--exp-color, var(--accent-purple));
+  background: var(--exp-color, var(--accent-green));
   opacity: 0.6;
 }
 
