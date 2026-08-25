@@ -6,7 +6,7 @@
 
 .cardWrapper {
   perspective: 1200px;
-  height: 380px;
+  height: 440px;
   cursor: pointer;
 }
 
@@ -124,7 +124,7 @@
   flex: 1;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
 
