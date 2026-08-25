@@ -24,18 +24,37 @@ export default function Contact() {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
-    // Build mailto link
-    const mailto = `mailto:reggieomondi2002@gmail.com?subject=${encodeURIComponent(form.subject || "Portfolio Inquiry")}&body=${encodeURIComponent(`From: ${form.name} <${form.email}>\n\n${form.message}`)}`;
-    window.location.href = mailto;
-    setTimeout(() => {
+    
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/reggieomondi2002@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          _subject: form.subject || "Portfolio Inquiry",
+          name: form.name,
+          email: form.email,
+          message: form.message
+        })
+      });
+
+      if (response.ok) {
+        setSent(true);
+        setForm({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setSent(false), 5000);
+      } else {
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Oops! Something went wrong. Please try again.");
+    } finally {
       setSending(false);
-      setSent(true);
-      setForm({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setSent(false), 4000);
-    }, 1000);
+    }
   };
 
   return (
@@ -110,7 +129,7 @@ export default function Contact() {
             {sent ? (
               <div className={styles.sentMsg}>
                 <CheckCircle size={40} style={{ color: "#10b981" }} />
-                <p>Message ready! Your email client should open.</p>
+                <p>Message sent successfully! I&apos;ll get back to you soon.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className={styles.form}>
@@ -134,7 +153,7 @@ export default function Contact() {
                 </div>
                 <button type="submit" className={`btn-primary ${styles.sendBtn}`} disabled={sending}>
                   <Send size={18} />
-                  <span>{sending ? "Opening email client..." : "Send Message"}</span>
+                  <span>{sending ? "Sending..." : "Send Message"}</span>
                 </button>
               </form>
             )}
