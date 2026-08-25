@@ -2,11 +2,13 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import styles from "./Skills.module.css";
+import { FaAws } from "react-icons/fa";
 import {
   SiFlutter, SiDart, SiPython, SiGo, SiFastapi,
   SiMongodb, SiMysql, SiFirebase, SiDocker,
   SiGooglecloud, SiGit, SiN8N,
-  SiReact, SiTailwindcss, SiTypescript
+  SiReact, SiTailwindcss, SiTypescript,
+  SiNextdotjs, SiVercel
 } from "react-icons/si";
 import { Brain, Shield, Smartphone, Server, Cloud, Database, Code2, Globe } from "lucide-react";
 
@@ -28,6 +30,7 @@ const skillGroups = [
     color: "#3b82f6",
     skills: [
       { name: "React", icon: <SiReact />, level: 90 },
+      { name: "Next.js", icon: <SiNextdotjs />, level: 85 },
       { name: "TypeScript", icon: <SiTypescript />, level: 88 },
       { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 92 },
     ],
@@ -60,7 +63,9 @@ const skillGroups = [
     color: "#f59e0b",
     skills: [
       { name: "Docker", icon: <SiDocker />, level: 82 },
+      { name: "AWS", icon: <FaAws />, level: 80 },
       { name: "GCP", icon: <SiGooglecloud />, level: 75 },
+      { name: "Vercel", icon: <SiVercel />, level: 85 },
       { name: "Git & CI/CD", icon: <SiGit />, level: 90 },
     ],
   },
