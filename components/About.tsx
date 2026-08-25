@@ -19,7 +19,7 @@ const stats = [
 
 const highlights = [
   { icon: <Zap size={16} />, text: "Flutter & Dart cross-platform mobile" },
-  { icon: <Monitor size={16} />, text: "Modern Web Development (React/Next.js)" },
+  { icon: <Monitor size={16} />, text: "Modern Web Development (React)" },
   { icon: <Cpu size={16} />, text: "Go & Python backend engineering" },
   { icon: <Globe size={16} />, text: "RESTful API design & microservices" },
   { icon: <Users size={16} />, text: "Agile, CI/CD & code review culture" },

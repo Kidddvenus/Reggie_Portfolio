@@ -28,7 +28,6 @@ const skillGroups = [
     color: "#3b82f6",
     skills: [
       { name: "React", icon: <SiReact />, level: 90 },
-      { name: "Next.js", icon: <Globe size={16} />, level: 85 },
       { name: "TypeScript", icon: <SiTypescript />, level: 88 },
       { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 92 },
     ],
@@ -63,7 +62,6 @@ const skillGroups = [
       { name: "Docker", icon: <SiDocker />, level: 82 },
       { name: "GCP", icon: <SiGooglecloud />, level: 75 },
       { name: "Git & CI/CD", icon: <SiGit />, level: 90 },
-      { name: "Vercel", icon: <Cloud size={16} />, level: 85 },
     ],
   },
   {
