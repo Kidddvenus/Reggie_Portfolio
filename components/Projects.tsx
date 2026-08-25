@@ -140,7 +140,7 @@ const projects = [
       "Firebase Auth & Firestore database",
       "Interactive Google Maps embed",
     ],
-    github: "https://github.com/Kidddvenus",
+    github: "https://github.com/Kidddvenus/pulse",
   },
 ];
 
