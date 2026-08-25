@@ -135,7 +135,7 @@ export default function Skills() {
             My <span className="gradient-text">Tech Stack</span>
           </h2>
           <p className="section-subtitle">
-            Full-spectrum engineering — from Flutter UIs and modern web applications to Go microservices, AI integrations and secure backend APIs.
+            Full-spectrum engineering from Flutter UIs and modern web applications to Go microservices, AI integrations and secure backend APIs.
           </p>
         </motion.div>
 

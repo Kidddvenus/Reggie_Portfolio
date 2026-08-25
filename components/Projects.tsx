@@ -217,7 +217,7 @@ export default function Projects() {
             Things I&apos;ve <span className="gradient-text">Built</span>
           </h2>
           <p className="section-subtitle">
-            Production-grade applications spanning mobile, backend, AI — hover any card to explore details.
+            Production-grade applications spanning mobile, Web, backend, AI — hover any card to explore details.
           </p>
         </motion.div>
 

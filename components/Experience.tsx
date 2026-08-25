@@ -14,17 +14,17 @@ const experiences = [
     color: "#7c3aed",
     current: true,
     bullets: [
-      "Designed, developed, and maintained cross-platform mobile applications using Flutter & Dart, and backend services & RESTful APIs in Python and Go — full-cycle from requirements through deployment.",
+      "Designed, developed, and maintained cross-platform mobile applications using Flutter & Dart, and backend services & RESTful APIs in Python and Go full-cycle from requirements through deployment.",
       "Designed and integrated RESTful APIs connecting mobile, web, and backend systems, enabling real-time data sync and high-performance functionality.",
       "Contributed to system architecture and database design decisions across client engagements, balancing scalability, performance, and maintainability.",
-      "Integrated LLM APIs into production mobile and backend systems — AI-powered features include conversational assistants, symptom analysis, and intelligent alerts.",
+      "Integrated LLM APIs into production mobile and backend systems, AI-powered features include conversational assistants, symptom analysis, and intelligent alerts.",
       "Enforced secure data handling, input validation, and authentication best practices; participated in code reviews and maintained technical documentation.",
     ],
   },
   {
     role: "Software Developer Intern",
     company: "Qwetu Sacco Bank",
-    type: "Onsite, Nairobi",
+    type: "Onsite",
     period: "May 2025 – Aug 2025",
     duration: "3 months",
     color: "#06b6d4",
@@ -56,7 +56,7 @@ export default function Experience() {
             Professional <span className="gradient-text">Journey</span>
           </h2>
           <p className="section-subtitle">
-            Building production-grade software for real clients — from mobile apps and backend APIs to AI-powered systems.
+            Building production-grade software for real clients from mobile apps and backend APIs to AI-powered systems.
           </p>
         </motion.div>
 

@@ -90,7 +90,7 @@ export default function About() {
             <motion.p className={styles.bio} variants={itemVariants}>
               I&apos;m <strong>Reggie Omondi</strong>, a Software Engineer and AI Engineer
               based in Nairobi, Kenya, with four years of hands-on experience building
-              end-to-end digital products — from elegant Flutter mobile interfaces and modern web applications to
+              end-to-end digital products from elegant Flutter mobile interfaces and modern web applications to
               high-performance Go and Python backends.
             </motion.p>
 

@@ -78,7 +78,7 @@ export default function Certifications() {
             <span className="gradient-text">Awards</span>
           </h2>
           <p className="section-subtitle">
-            Continuously investing in growth — from mobile development to AI, cybersecurity, and data analytics.
+            Continuously investing in growth from mobile development to AI, cybersecurity, and data analytics.
           </p>
         </motion.div>
 
