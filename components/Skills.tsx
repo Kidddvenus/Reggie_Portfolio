@@ -5,8 +5,8 @@ import styles from "./Skills.module.css";
 import {
   SiFlutter, SiDart, SiPython, SiGo, SiFastapi,
   SiMongodb, SiMysql, SiFirebase, SiDocker,
-  SiGooglecloud, SiGit, SiVercel, SiN8N,
-  SiReact, SiNextdotjs, SiTailwindcss, SiTypescript
+  SiGooglecloud, SiGit, SiN8N,
+  SiReact, SiTailwindcss, SiTypescript
 } from "react-icons/si";
 import { Brain, Shield, Smartphone, Server, Cloud, Database, Code2, Globe } from "lucide-react";
 
@@ -28,7 +28,7 @@ const skillGroups = [
     color: "#3b82f6",
     skills: [
       { name: "React", icon: <SiReact />, level: 90 },
-      { name: "Next.js", icon: <SiNextdotjs />, level: 85 },
+      { name: "Next.js", icon: <Globe size={16} />, level: 85 },
       { name: "TypeScript", icon: <SiTypescript />, level: 88 },
       { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 92 },
     ],
@@ -63,7 +63,7 @@ const skillGroups = [
       { name: "Docker", icon: <SiDocker />, level: 82 },
       { name: "GCP", icon: <SiGooglecloud />, level: 75 },
       { name: "Git & CI/CD", icon: <SiGit />, level: 90 },
-      { name: "Vercel", icon: <SiVercel />, level: 85 },
+      { name: "Vercel", icon: <Cloud size={16} />, level: 85 },
     ],
   },
   {
