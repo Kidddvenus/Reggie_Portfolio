@@ -13,7 +13,7 @@ const ParticleField = dynamic(() => import("./canvas/ParticleField"), {
 });
 
 const TITLES = [
-  "Full-Stack Developer",
+  "Software Engineer",
   "Flutter & Dart Expert",
   "Go & Python Engineer",
   "AI Integration Specialist",
@@ -76,102 +76,102 @@ export default function Hero() {
       <div className={styles.content}>
         <div className={styles.textContent}>
           {/* Location badge */}
-        <motion.div
-          className={styles.locationBadge}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={0.2}
-        >
-          <MapPin size={14} />
-          <span>Nairobi, Kenya</span>
-          <span className={styles.pulse} />
-        </motion.div>
+          <motion.div
+            className={styles.locationBadge}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            custom={0.2}
+          >
+            <MapPin size={14} />
+            <span>Nairobi, Kenya</span>
+            <span className={styles.pulse} />
+          </motion.div>
 
-        {/* Name */}
-        <motion.h1
-          className={styles.name}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={0.4}
-        >
-          Hi, I&apos;m{" "}
-          <span className="gradient-text">Reggie Omondi</span>
-        </motion.h1>
+          {/* Name */}
+          <motion.h1
+            className={styles.name}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            custom={0.4}
+          >
+            Hi, I&apos;m{" "}
+            <span className="gradient-text">Reggie Omondi</span>
+          </motion.h1>
 
-        {/* Typewriter title */}
-        <motion.div
-          className={styles.titleRow}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={0.6}
-        >
-          <span className={styles.titlePrefix}>I build </span>
-          <span className={styles.typewriter}>
-            {displayed}
-            <span className={styles.cursor}>|</span>
-          </span>
-        </motion.div>
+          {/* Typewriter title */}
+          <motion.div
+            className={styles.titleRow}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            custom={0.6}
+          >
+            <span className={styles.titlePrefix}>I am a </span>
+            <span className={styles.typewriter}>
+              {displayed}
+              <span className={styles.cursor}>|</span>
+            </span>
+          </motion.div>
 
-        {/* Summary */}
-        <motion.p
-          className={styles.summary}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={0.8}
-        >
-          Full-Stack Developer with <strong>4+ years</strong> of experience building
-          cross-platform mobile apps, scalable backend APIs, and AI-powered systems.
-          Winner of the <span className={styles.highlight}>Taifa Teule Tech Expo 2025</span>.
-        </motion.p>
+          {/* Summary */}
+          <motion.p
+            className={styles.summary}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            custom={0.8}
+          >
+            Full-stack software engineer with <strong>4+ years</strong> of experience building
+            cross-platform mobile apps, scalable backend APIs, and AI-powered systems.
+            Winner of the <span className={styles.highlight}>Taifa Teule Tech Expo 2025</span>.
+          </motion.p>
 
-        {/* Buttons */}
-        <motion.div
-          className={styles.actions}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={1.0}
-        >
-          <a href="#projects" className="btn-primary" onClick={(e) => {
-            e.preventDefault();
-            document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
-          }}>
-            <span>View Projects</span>
-            <ArrowRight size={18} />
-          </a>
-          <a href="#contact" className="btn-outline" onClick={(e) => {
-            e.preventDefault();
-            document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-          }}>
-            Get In Touch
-          </a>
-        </motion.div>
+          {/* Buttons */}
+          <motion.div
+            className={styles.actions}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            custom={1.0}
+          >
+            <a href="#projects" className="btn-primary" onClick={(e) => {
+              e.preventDefault();
+              document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
+            }}>
+              <span>View Projects</span>
+              <ArrowRight size={18} />
+            </a>
+            <a href="#contact" className="btn-outline" onClick={(e) => {
+              e.preventDefault();
+              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+            }}>
+              Get In Touch
+            </a>
+          </motion.div>
 
-        {/* Social / contact pills */}
-        <motion.div
-          className={styles.socials}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={1.2}
-        >
-          <a href="https://github.com/Kidddvenus" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="GitHub">
-            <FaGithub size={18} /><span>GitHub</span>
-          </a>
-          <a href="https://linkedin.com/in/reggie-omondi-1052b0275" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="LinkedIn">
-            <FaLinkedin size={18} /><span>LinkedIn</span>
-          </a>
-          <a href="mailto:reggieomondi2002@gmail.com" className={styles.socialLink} aria-label="Email">
-            <Mail size={18} /><span>Email</span>
-          </a>
-          <a href="tel:+254705079949" className={styles.socialLink} aria-label="Phone">
-            <Phone size={18} /><span>Call</span>
-          </a>
-        </motion.div>
+          {/* Social / contact pills */}
+          <motion.div
+            className={styles.socials}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            custom={1.2}
+          >
+            <a href="https://github.com/Kidddvenus" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="GitHub">
+              <FaGithub size={18} /><span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/reggie-omondi-1052b0275" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="LinkedIn">
+              <FaLinkedin size={18} /><span>LinkedIn</span>
+            </a>
+            <a href="mailto:reggieomondi2002@gmail.com" className={styles.socialLink} aria-label="Email">
+              <Mail size={18} /><span>Email</span>
+            </a>
+            <a href="tel:+254705079949" className={styles.socialLink} aria-label="Phone">
+              <Phone size={18} /><span>Call</span>
+            </a>
+          </motion.div>
         </div>
 
         {/* Profile Image */}
