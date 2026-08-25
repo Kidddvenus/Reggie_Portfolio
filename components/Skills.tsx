@@ -5,9 +5,10 @@ import styles from "./Skills.module.css";
 import {
   SiFlutter, SiDart, SiPython, SiGo, SiFastapi,
   SiMongodb, SiMysql, SiFirebase, SiDocker,
-  SiGooglecloud, SiGit, SiVercel, SiN8N
+  SiGooglecloud, SiGit, SiVercel, SiN8N,
+  SiReact, SiNextdotjs, SiTailwindcss, SiTypescript
 } from "react-icons/si";
-import { Brain, Shield, Smartphone, Server, Cloud, Database, Code2 } from "lucide-react";
+import { Brain, Shield, Smartphone, Server, Cloud, Database, Code2, Globe } from "lucide-react";
 
 const skillGroups = [
   {
@@ -19,6 +20,17 @@ const skillGroups = [
       { name: "Dart", icon: <SiDart />, level: 92 },
       { name: "State Management", icon: <Code2 size={16} />, level: 88 },
       { name: "Clean Architecture", icon: <Code2 size={16} />, level: 85 },
+    ],
+  },
+  {
+    category: "Web Development",
+    icon: <Globe size={22} />,
+    color: "#3b82f6",
+    skills: [
+      { name: "React", icon: <SiReact />, level: 90 },
+      { name: "Next.js", icon: <SiNextdotjs />, level: 85 },
+      { name: "TypeScript", icon: <SiTypescript />, level: 88 },
+      { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 92 },
     ],
   },
   {
@@ -120,7 +132,7 @@ export default function Skills() {
             My <span className="gradient-text">Tech Stack</span>
           </h2>
           <p className="section-subtitle">
-            Full-spectrum engineering — from Flutter UIs to Go microservices, AI integrations and secure backend APIs.
+            Full-spectrum engineering — from Flutter UIs and modern web applications to Go microservices, AI integrations and secure backend APIs.
           </p>
         </motion.div>
 

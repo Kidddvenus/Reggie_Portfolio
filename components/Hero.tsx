@@ -14,6 +14,7 @@ const ParticleField = dynamic(() => import("./canvas/ParticleField"), {
 
 const TITLES = [
   "Software Engineer",
+  "Full-Stack Web Developer",
   "Flutter & Dart Expert",
   "Go & Python Engineer",
   "AI Integration Specialist",

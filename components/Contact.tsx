@@ -72,7 +72,7 @@ export default function Contact() {
             </div>
 
             <p className={styles.intro}>
-              Whether you need a Flutter app, a Python/Go backend, or AI integrations —
+              Whether you need a modern web application, a Flutter app, a Python/Go backend, or AI integrations —
               I&apos;d love to hear about your project. Let&apos;s create something exceptional together.
             </p>
 
@@ -95,14 +95,7 @@ export default function Contact() {
                 </div>
               ))}
             </div>
-
-            {/* Referee */}
-            <div className={`glass-card-cyan ${styles.referee}`}>
-              <div className={styles.refTag}>Referee</div>
-              <div className={styles.refName}>Alphonce Chore</div>
-              <div className={styles.refRole}>ICT Manager, Qwetu Sacco Bank</div>
-              <a href="tel:+254722257879" className={styles.refPhone}>0722 257 879</a>
-            </div>
+            
           </motion.div>
 
           {/* Right: Form */}

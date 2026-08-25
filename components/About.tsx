@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import dynamic from "next/dynamic";
 import styles from "./About.module.css";
-import { Code2, Cpu, Globe, Trophy, Users, Zap } from "lucide-react";
+import { Code2, Cpu, Globe, Trophy, Users, Zap, Shield, Monitor } from "lucide-react";
 
 const FloatingSphere = dynamic(() => import("./canvas/FloatingSphere"), {
   ssr: false,
@@ -19,11 +19,12 @@ const stats = [
 
 const highlights = [
   { icon: <Zap size={16} />, text: "Flutter & Dart cross-platform mobile" },
+  { icon: <Monitor size={16} />, text: "Modern Web Development (React/Next.js)" },
   { icon: <Cpu size={16} />, text: "Go & Python backend engineering" },
   { icon: <Globe size={16} />, text: "RESTful API design & microservices" },
   { icon: <Users size={16} />, text: "Agile, CI/CD & code review culture" },
   { icon: <Trophy size={16} />, text: "LLM API & AI workflow automation" },
-  { icon: <Code2 size={16} />, text: "Security-aware (Cisco certified)" },
+  { icon: <Shield size={16} />, text: "Security-aware (Cisco certified)" },
 ];
 
 export default function About() {
@@ -89,22 +90,22 @@ export default function About() {
             <motion.p className={styles.bio} variants={itemVariants}>
               I&apos;m <strong>Reggie Omondi</strong>, a Software Engineer and AI Engineer
               based in Nairobi, Kenya, with four years of hands-on experience building
-              end-to-end digital products — from elegant Flutter mobile interfaces to
+              end-to-end digital products — from elegant Flutter mobile interfaces and modern web applications to
               high-performance Go and Python backends.
             </motion.p>
 
             <motion.p className={styles.bio} variants={itemVariants}>
               My flagship project <span className={styles.accent}>MyWallet</span> — a Kenyan
-              digital wallet with real-time M-Pesa integration — showcases my ability to
+              digital wallet with real-time M-Pesa integration showcases my ability to
               design microservices architectures, implement secure auth flows, and deliver
               polished cross-platform experiences. I&apos;m also security-aware with a
               Cisco Cybersecurity Essentials certification.
             </motion.p>
 
             <motion.p className={styles.bio} variants={itemVariants}>
-              Beyond coding, I integrate AI and automation into production systems — from
+              Beyond coding, I integrate AI and automation into production systems from
               LLM-powered conversational assistants to n8n workflow automation. I thrive
-              at the intersection of mobile, backend, and intelligent systems.
+              at the intersection of mobile, web, backend, and intelligent systems.
             </motion.p>
 
             {/* Highlights */}
