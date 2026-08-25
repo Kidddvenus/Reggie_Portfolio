@@ -26,6 +26,7 @@ const projects = [
       "Safaricom Daraja (M-Pesa) via async HTTPX",
       "Docker Compose containerization + structured logging",
     ],
+    github: "https://github.com/Kidddvenus",
   },
   {
     id: "drai",
@@ -44,6 +45,7 @@ const projects = [
       "Cross-platform Flutter frontend",
       "Python REST backend",
     ],
+    github: "https://github.com/Kidddvenus",
   },
   {
     id: "admin-erp",
@@ -62,6 +64,7 @@ const projects = [
       "Real-time REST API updates",
       "Platform-specific UX (Android & iOS)",
     ],
+    github: "https://github.com/Kidddvenus/admin-dashboard",
   },
   {
     id: "beta",
@@ -80,6 +83,7 @@ const projects = [
       "RESTful Python backend",
       "Cross-platform Flutter frontend",
     ],
+    github: "https://github.com/Kidddvenus/beta",
   },
   {
     id: "careconnect",
@@ -98,6 +102,7 @@ const projects = [
       "Webhook triggers & conditional logic",
       "Automated notification pipelines",
     ],
+    github: "https://github.com/Kidddvenus/CareConnect-n8n",
   },
   {
     id: "info-assistant",
@@ -116,6 +121,7 @@ const projects = [
       "Secure credential management",
       "Flutter Android-native build",
     ],
+    github: "https://github.com/Kidddvenus/Info-Assistant",
   },
 ];
 
@@ -189,7 +195,7 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
           </div>
 
           <div className={styles.cardLinks}>
-            <a href="https://github.com/Kidddvenus" target="_blank" rel="noreferrer" className={styles.linkBtn}>
+            <a href={project.github} target="_blank" rel="noreferrer" className={styles.linkBtn}>
               <FaGithub size={16} /> GitHub
             </a>
           </div>
