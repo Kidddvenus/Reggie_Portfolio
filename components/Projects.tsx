@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import styles from "./Projects.module.css";
 import {
   ExternalLink, Smartphone, Brain,
-  LayoutDashboard, CheckSquare, Phone, MessageSquare
+  LayoutDashboard, CheckSquare, Phone, MessageSquare, MapPin
 } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
@@ -122,6 +122,25 @@ const projects = [
       "Flutter Android-native build",
     ],
     github: "https://github.com/Kidddvenus/Info-Assistant",
+  },
+  {
+    id: "attendance-pulse",
+    title: "Attendance Pulse",
+    subtitle: "GPS Attendance Tracker",
+    description:
+      "A GPS-based attendance tracking app for students using real-time geolocation, biometric verification, interactive maps, and Firebase Auth/Firestore.",
+    tags: ["Flutter", "Firebase", "GPS", "Biometrics", "Google Maps"],
+    icon: <MapPin size={28} />,
+    color: "#3b82f6",
+    gradient: "linear-gradient(135deg, #2563eb 0%, #06b6d4 100%)",
+    featured: false,
+    bullets: [
+      "Biometric verification via local_auth",
+      "Real-time GPS tracking & reverse geocoding",
+      "Firebase Auth & Firestore database",
+      "Interactive Google Maps embed",
+    ],
+    github: "https://github.com/Kidddvenus",
   },
 ];
 
