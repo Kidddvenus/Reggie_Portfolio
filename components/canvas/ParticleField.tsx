@@ -83,11 +83,11 @@ function FloatingTorus() {
     if (ref.current) {
       ref.current.rotation.x = state.clock.elapsedTime * 0.3;
       ref.current.rotation.y = state.clock.elapsedTime * 0.5;
-      ref.current.position.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.2;
+      ref.current.position.y = 1.5 + Math.sin(state.clock.elapsedTime * 0.5) * 0.2;
     }
   });
   return (
-    <mesh ref={ref} position={[2.5, 0, 0]}>
+    <mesh ref={ref} position={[3.5, 1.5, -1]}>
       <torusGeometry args={[0.6, 0.15, 16, 60]} />
       <meshStandardMaterial
         color="#7c3aed"

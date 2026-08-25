@@ -65,30 +65,40 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 650px;
-  width: 100%;
+  max-width: 700px;
 }
 
-.imageWrapper {
-  position: relative;
-  width: 380px;
-  height: 380px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid rgba(6, 182, 212, 0.4);
-  box-shadow: 0 0 40px rgba(6, 182, 212, 0.15), inset 0 0 20px rgba(6, 182, 212, 0.2);
+.imageContent {
   flex-shrink: 0;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(6, 182, 212, 0.05);
 }
 
 .profileImage {
+  width: 320px;
+  height: 420px;
+  border-radius: 30px;
   object-fit: cover;
-  object-position: top;
-  width: 100%;
-  height: 100%;
+  border: 2px solid rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 60px rgba(6, 182, 212, 0.15), 0 0 20px rgba(6, 182, 212, 0.4) inset;
+  filter: drop-shadow(0 0 10px rgba(6,182,212,0.2));
+}
+
+.imageGlow {
+  position: absolute;
+  inset: -15px;
+  border-radius: 45px;
+  background: linear-gradient(135deg, transparent, var(--accent-cyan), var(--accent-green), transparent);
+  animation: pulse-glow 4s ease-in-out infinite;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.02); }
 }
 
 .locationBadge {
@@ -242,30 +252,23 @@
   100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
-@media (max-width: 992px) {
-  .content {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding-top: 140px;
-    gap: 32px;
+@media (max-width: 968px) {
+  .content { 
+    flex-direction: column-reverse; 
+    align-items: flex-start;
+    padding: 100px 24px 60px;
   }
-  .textContent {
-    align-items: center;
+  .profileImage {
+    width: 240px;
+    height: 320px;
   }
-  .titleRow {
-    justify-content: center;
-  }
-  .imageWrapper {
-    width: 280px;
-    height: 280px;
+  .imageContent {
+    align-self: center;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .content { padding: 100px 16px 60px; }
   .name { font-size: 2.4rem; }
-  .imageWrapper {
-    width: 240px;
-    height: 240px;
-  }
 }

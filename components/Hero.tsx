@@ -1,8 +1,8 @@
 "use client";
+import Image from "next/image";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import styles from "./Hero.module.css";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -17,14 +17,14 @@ const TITLES = [
   "Flutter & Dart Expert",
   "Go & Python Engineer",
   "AI Integration Specialist",
-  "Mobile App Architect",
+  "Mobile App Developer",
 ];
 
 export default function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const current = TITLES[titleIndex];
@@ -46,15 +46,17 @@ export default function Hero() {
         setTitleIndex((i) => (i + 1) % TITLES.length);
       }
     }
-    return () => clearTimeout(timeoutRef.current);
+    // return () => clearTimeout(timeoutRef.current);
   }, [displayed, isDeleting, titleIndex]);
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
+    // `visible` is a function so we can use the `custom` prop on motion components.
+    // Cast the easing array to `any` to satisfy framer-motion's TypeScript types.
     visible: (delay: number) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] },
+      transition: { duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] as any },
     }),
   };
 
@@ -74,7 +76,7 @@ export default function Hero() {
       <div className={styles.content}>
         <div className={styles.textContent}>
           {/* Location badge */}
-          <motion.div
+        <motion.div
           className={styles.locationBadge}
           variants={fadeUp}
           initial="hidden"
@@ -174,19 +176,20 @@ export default function Hero() {
 
         {/* Profile Image */}
         <motion.div
-          className={styles.imageWrapper}
+          className={styles.imageContent}
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           custom={0.8}
         >
-          <Image 
-            src="/profile.jpeg" 
-            alt="Reggie Omondi" 
-            width={400} 
-            height={400} 
-            priority
+          <div className={styles.imageGlow} />
+          <Image
+            src="/profile.jpeg"
+            alt="Reggie Omondi"
+            width={320}
+            height={420}
             className={styles.profileImage}
+            priority
           />
         </motion.div>
       </div>
