@@ -223,8 +223,4 @@
 
 @media (max-width: 640px) {
   .grid { grid-template-columns: 1fr; }
-  .cardWrapper { height: auto; min-height: 320px; }
-  /* Disable 3D flip on mobile; always show front */
-  .cardInner { transform: none !important; }
-  .cardBack { display: none; }
 }

@@ -130,6 +130,7 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
       transition={{ duration: 0.6, delay: index * 0.1 }}
       onMouseEnter={() => setFlipped(true)}
       onMouseLeave={() => setFlipped(false)}
+      onClick={() => setFlipped(!flipped)}
     >
       <div className={`${styles.cardInner} ${flipped ? styles.flipped : ""}`}>
         {/* Front */}
