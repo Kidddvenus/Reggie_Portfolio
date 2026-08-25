@@ -72,9 +72,9 @@ export default function Footer() {
       <div className={styles.bottom}>
         <div className={styles.bottomInner}>
           <span>© 2025 Reggie Omondi. All rights reserved.</span>
-          <span className={styles.made}>
+          {/* <span className={styles.made}>
             Made with <Heart size={13} style={{ display: "inline", color: "#ec4899", verticalAlign: "middle" }} /> in Nairobi
-          </span>
+          </span> */}
         </div>
       </div>
     </footer>
