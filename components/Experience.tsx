@@ -10,7 +10,7 @@ const experiences = [
     company: "R-Tech",
     type: "Remote",
     period: "Aug 2023 – Present",
-    duration: "2+ years",
+    duration: "3+ years",
     color: "#7c3aed",
     current: true,
     bullets: [
