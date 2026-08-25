@@ -12,6 +12,7 @@ const certifications = [
     icon: <Shield size={24} />,
     color: "#ef4444",
     type: "certification",
+    url: "https://www.linkedin.com/in/reggie-omondi-1052b0275/details/certifications/1751994271083/single-media-viewer?profileId=ACoAAEMkI5UBhY_x93pwtdPSXT9hTEBI_FboxXs",
   },
   {
     title: "Machine Learning with Python",
@@ -20,6 +21,7 @@ const certifications = [
     icon: <Brain size={24} />,
     color: "#7c3aed",
     type: "certification",
+    url: "https://www.freecodecamp.org/certification/Reggieerick/machine-learning-with-python-v7",
   },
   {
     title: "Data Analytics with Python",
@@ -28,6 +30,7 @@ const certifications = [
     icon: <BarChart3 size={24} />,
     color: "#06b6d4",
     type: "certification",
+    url: "https://www.freecodecamp.org/certification/Reggieerick/data-analysis-with-python-v7",
   },
   {
     title: "Flutter Development Course",
@@ -36,6 +39,7 @@ const certifications = [
     icon: <Code2 size={24} />,
     color: "#54c5f8",
     type: "certification",
+    url: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIyMjk3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODQ1MDQ4MV82MTg4OTgzMTc0OTU2MDk3MTMxMC5wbmciLCJ1c2VybmFtZSI6IlJlZ2dpZSBPbW9uZGkgRXJpY2sgIn0&referrer=https%3A%2F%2Fcertificates.simplicdn.net%2Fshare%2F8450481_61889831749560971310.png",
   },
 ];
 
@@ -107,10 +111,13 @@ export default function Certifications() {
         {/* Certifications grid */}
         <div className={styles.certsGrid}>
           {certifications.map((cert, i) => (
-            <motion.div
+            <motion.a
               key={cert.title}
+              href={cert.url}
+              target="_blank"
+              rel="noreferrer"
               className={`glass-card-cyan ${styles.certCard}`}
-              style={{ "--cert-color": cert.color } as React.CSSProperties}
+              style={{ "--cert-color": cert.color, textDecoration: "none" } as React.CSSProperties}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
@@ -122,7 +129,7 @@ export default function Certifications() {
               <h4 className={styles.certTitle}>{cert.title}</h4>
               <div className={styles.certIssuer}>{cert.issuer}</div>
               <div className={styles.certDate}>{cert.date}</div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
