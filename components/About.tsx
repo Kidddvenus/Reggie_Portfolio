@@ -87,7 +87,7 @@ export default function About() {
             <div className="divider" />
 
             <motion.p className={styles.bio} variants={itemVariants}>
-              I&apos;m <strong>Reggie Omondi</strong>, a Full-Stack Developer and AI Engineer
+              I&apos;m <strong>Reggie Omondi</strong>, a Software Engineer and AI Engineer
               based in Nairobi, Kenya, with four years of hands-on experience building
               end-to-end digital products — from elegant Flutter mobile interfaces to
               high-performance Go and Python backends.
