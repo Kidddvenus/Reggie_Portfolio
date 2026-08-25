@@ -12,7 +12,7 @@ const projects = [
   {
     id: "mywallet",
     title: "MyWallet",
-    subtitle: "Lumina Bank",
+    subtitle: "Fintech Mobile Wallet App",
     description:
       "A modern, Kenyan-focused mobile wallet application built with Flutter. Provides secure biometric authentication, seamless M-Pesa payments (Paybill, Pochi), deposits, and intuitive finance management.",
     tags: ["Flutter", "Biometrics", "M-Pesa", "sqflite", "PDF Export", "UI/UX"],
@@ -31,19 +31,19 @@ const projects = [
   {
     id: "drai",
     title: "Dr.AI",
-    subtitle: "AI-Powered Healthcare App",
+    subtitle: "AI Health & Wellness App",
     description:
-      "A cross-platform Flutter + Python app featuring AI-driven symptom analysis, personalized nutrition plans, and fitness tracking via LLM API integration.",
-    tags: ["Flutter", "Python", "LLM APIs", "Healthcare", "AI"],
+      "A cross-platform Flutter application providing users with AI-powered symptom analysis, personalized nutrition, mental health support, and emergency facility locators.",
+    tags: ["Flutter", "AI", "Health", "Google Maps", "Computer Vision"],
     icon: <Brain size={28} />,
     color: "#ec4899",
     gradient: "linear-gradient(135deg, #be185d 0%, #7c3aed 100%)",
     featured: true,
     bullets: [
-      "AI symptom analysis via LLM integration",
-      "Personalized nutrition & fitness plans",
-      "Cross-platform Flutter frontend",
-      "Python REST backend",
+      "AI Consultations: Symptom analysis & mental health",
+      "Camera Scan: AI analysis of health-related images",
+      "Emergency Services: Locate nearby hospitals & clinics",
+      "Health Trackers: Weight, Sleep, Menstrual cycle & Prescriptions",
     ],
     github: "https://codemagic.io/app/6a2be9c3f0baf157ae8c435e/build/6a2bf06f29f8b6f0887976a5",
   },
