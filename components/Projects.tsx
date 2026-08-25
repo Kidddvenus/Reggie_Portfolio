@@ -26,7 +26,7 @@ const projects = [
       "Safaricom Daraja (M-Pesa) via async HTTPX",
       "Docker Compose containerization + structured logging",
     ],
-    github: "https://github.com/Kidddvenus",
+    github: "https://codemagic.io/app/6a2bff3f0330d4437e444016/build/6a6b2f9624c9d250ceacff63",
   },
   {
     id: "drai",
@@ -45,7 +45,7 @@ const projects = [
       "Cross-platform Flutter frontend",
       "Python REST backend",
     ],
-    github: "https://github.com/Kidddvenus",
+    github: "https://codemagic.io/app/6a2be9c3f0baf157ae8c435e/build/6a2bf06f29f8b6f0887976a5",
   },
   {
     id: "admin-erp",
@@ -196,7 +196,11 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
 
           <div className={styles.cardLinks}>
             <a href={project.github} target="_blank" rel="noreferrer" className={styles.linkBtn}>
-              <FaGithub size={16} /> GitHub
+              {project.github.includes("github.com") ? (
+                <><FaGithub size={16} /> GitHub</>
+              ) : (
+                <><ExternalLink size={16} /> Live Build</>
+              )}
             </a>
           </div>
         </div>
