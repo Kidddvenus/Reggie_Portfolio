@@ -15,7 +15,7 @@ const projects = [
     subtitle: "Fintech Mobile Wallet App",
     description:
       "A modern, Kenyan-focused mobile wallet application built with Flutter. Provides secure biometric authentication, seamless M-Pesa payments (Paybill, Pochi), deposits, and intuitive finance management.",
-    tags: ["Flutter", "Biometrics", "M-Pesa", "sqflite", "PDF Export", "UI/UX"],
+    tags: ["Flutter", "Biometrics", "M-Pesa", "UI/UX", "Python", "FastAPI", "Docker", "Microservices"],
     icon: <Smartphone size={28} />,
     color: "#06b6d4",
     gradient: "linear-gradient(135deg, #0891b2 0%, #7c3aed 100%)",
@@ -34,7 +34,7 @@ const projects = [
     subtitle: "AI Health & Wellness App",
     description:
       "A cross-platform Flutter application providing users with AI-powered symptom analysis, personalized nutrition, mental health support, and emergency facility locators.",
-    tags: ["Flutter", "AI", "Health", "Google Maps", "Computer Vision"],
+    tags: ["Flutter", "AI", "Health", "OpenStreetMap", "Computer Vision", "Firebase", "Python", "FastAPI", "Microservices"],
     icon: <Brain size={28} />,
     color: "#ec4899",
     gradient: "linear-gradient(135deg, #be185d 0%, #7c3aed 100%)",
