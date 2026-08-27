@@ -140,6 +140,7 @@ const projects = [
       "Interactive Google Maps embed",
     ],
     github: "https://github.com/Kidddvenus/pulse",
+    video: "/Pulse demo.mp4",
   },
   {
     id: "gracedo",
@@ -239,6 +240,11 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
                 <><ExternalLink size={16} /> Live Build</>
               )}
             </a>
+            {"video" in project && (project as any).video && (
+              <a href={(project as any).video} target="_blank" rel="noreferrer" className={styles.linkBtn}>
+                <ExternalLink size={16} /> Live demo
+              </a>
+            )}
           </div>
         </div>
       </div>
