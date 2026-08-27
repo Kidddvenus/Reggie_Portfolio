@@ -27,6 +27,7 @@ const projects = [
       "Offline local storage via sqflite & secure_storage",
     ],
     github: "https://codemagic.io/app/6a2bff3f0330d4437e444016/build/6a6b2f9624c9d250ceacff63",
+    video: "/MyWallet demo.mp4",
   },
   {
     id: "drai",
@@ -237,7 +238,7 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
               {project.github.includes("github.com") ? (
                 <><FaGithub size={16} /> GitHub</>
               ) : (
-                <><ExternalLink size={16} /> Live Build</>
+                <><ExternalLink size={16} /> Live demo</>
               )}
             </a>
             {"video" in project && (project as any).video && (
