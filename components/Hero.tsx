@@ -124,8 +124,8 @@ export default function Hero() {
             animate="visible"
             custom={0.8}
           >
-            Full-stack software engineer with <strong>4+ years</strong> of experience building
-            cross-platform mobile apps, scalable backend APIs, and AI-powered systems.
+            Full-stack software engineer with <strong>3+ years</strong> of experience building
+            cross-platform mobile apps, web applications, scalable backend APIs, and AI-powered systems.
             Winner of the <span className={styles.highlight}>Taifa Teule Tech Expo 2025</span>.
           </motion.p>
 

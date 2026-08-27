@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import styles from "./Projects.module.css";
 import {
   ExternalLink, Smartphone, Brain,
-  LayoutDashboard, CheckSquare, Phone, MessageSquare, MapPin
+  LayoutDashboard, CheckSquare, Phone, MessageSquare, MapPin, Globe
 } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
@@ -72,15 +72,14 @@ const projects = [
     subtitle: "Project & Task Management",
     description:
       "A cross-platform Flutter application for managing projects, employees, and tasks, with a Firebase-powered backend and AI/Cloud Function integrations.",
-    tags: ["Flutter", "Firebase", "Cloud Functions", "Vertex AI", "Genkit", "PDF Export"],
+    tags: ["Flutter", "Firebase", "PDF Export"],
     icon: <CheckSquare size={28} />,
     color: "#10b981",
     gradient: "linear-gradient(135deg, #059669 0%, #06b6d4 100%)",
     featured: false,
     bullets: [
       "Project & Task Management: Create, view, and assign tasks",
-      "Employee Records: Manage employees and project managers",
-      "Cloud & AI: Firebase, Cloud Functions, Vertex AI, Genkit",
+      "Employee Records: Manage employees and project managers",      
       "Data Tables & PDF Export: View and export project/task data",
     ],
     github: "https://github.com/Kidddvenus/beta",
@@ -141,6 +140,25 @@ const projects = [
       "Interactive Google Maps embed",
     ],
     github: "https://github.com/Kidddvenus/pulse",
+  },
+  {
+    id: "gracedo",
+    title: "Gracedo Services Limited",
+    subtitle: "Pan-African Consultancy",
+    description:
+      "A premier Pan-African consultancy dedicated to bridging gaps in human development. We empower individuals, organizations, and communities through strategic development, impactful management, and visionary advisory.",
+    tags: ["HTML5", "Tailwind CSS", "Vanilla JS", "Vercel"],
+    icon: <Globe size={28} />,
+    color: "#eab308",
+    gradient: "linear-gradient(135deg, #ca8a04 0%, #ea580c 100%)",
+    featured: true,
+    bullets: [
+      "Strategic Advisory & Project Management",
+      "Digital Transformation & Conferencing",
+      "Fast & Accessible HTML5 + Tailwind CSS UI",
+      "Vercel Deployment with Speed Insights",
+    ],
+    github: "https://gracedo-project.vercel.app/",
   },
 ];
 
