@@ -15,7 +15,7 @@ const projects = [
     subtitle: "Fintech Mobile Wallet App",
     description:
       "A modern, Kenyan-focused mobile wallet application built with Flutter. Provides secure biometric authentication, seamless M-Pesa payments (Paybill, Pochi), deposits, and intuitive finance management.",
-    tags: ["Flutter", "Biometrics", "M-Pesa", "UI/UX", "Python", "FastAPI", "Docker", "Microservices"],
+    tags: ["Flutter", "Authentication", "MongoDB", "M-Pesa", "UI/UX", "Python", "FastAPI", "Docker", "Microservices"],
     icon: <Smartphone size={28} />,
     color: "#06b6d4",
     gradient: "linear-gradient(135deg, #0891b2 0%, #7c3aed 100%)",
@@ -54,7 +54,7 @@ const projects = [
     subtitle: "Admin Dashboard ERP",
     description:
       "A modern, cross-platform Admin Dashboard built with Flutter. Provides a comprehensive interface for managing members, leaders, cells, meetings, and reports, with seamless integration to Firebase Firestore.",
-    tags: ["Flutter", "Firebase", "Cross-Platform", "Dashboard", "CSV Export", "Data Viz"],
+    tags: ["Flutter", "Firebase", "Cross-Platform", "Dashboard", "CSV Export", "Data Visualization"],
     icon: <LayoutDashboard size={28} />,
     color: "#f59e0b",
     gradient: "linear-gradient(135deg, #d97706 0%, #ef4444 100%)",
@@ -66,6 +66,7 @@ const projects = [
       "Multi-Platform: Android, iOS, Web, Windows, Linux, macOS",
     ],
     github: "https://github.com/Kidddvenus/admin-dashboard",
+    video: "/Admin demo.mp4",
   },
   {
     id: "beta",
@@ -129,7 +130,7 @@ const projects = [
     subtitle: "GPS Attendance Tracker",
     description:
       "A GPS-based attendance tracking app for students using real-time geolocation, biometric verification, interactive maps, and Firebase Auth/Firestore.",
-    tags: ["Flutter", "Firebase", "GPS", "Biometrics", "Google Maps"],
+    tags: ["Flutter", "Firebase", "Geofencing", "Biometrics Authentication", "Google Maps"],
     icon: <MapPin size={28} />,
     color: "#3b82f6",
     gradient: "linear-gradient(135deg, #2563eb 0%, #06b6d4 100%)",
@@ -238,7 +239,7 @@ function ProjectCard({ project, index, inView }: { project: (typeof projects)[0]
               {project.github.includes("github.com") ? (
                 <><FaGithub size={16} /> GitHub</>
               ) : (
-                <><ExternalLink size={16} /> Live demo</>
+                <><ExternalLink size={16} /> Live Build</>
               )}
             </a>
             {"video" in project && (project as any).video && (
