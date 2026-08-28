@@ -47,6 +47,7 @@ const projects = [
       "Health Trackers: Weight, Sleep, Menstrual cycle & Prescriptions",
     ],
     github: "https://codemagic.io/app/6a2be9c3f0baf157ae8c435e/build/6a2bf06f29f8b6f0887976a5",
+    video: "/drai demo.mp4",
   },
   {
     id: "admin-erp",
