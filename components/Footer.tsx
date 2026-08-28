@@ -37,7 +37,7 @@ export default function Footer() {
             Full-Stack &amp; AI Engineer · Nairobi, Kenya
           </p>
           <p className={styles.tagline2}>
-            Building elegant mobile apps, scalable APIs, and intelligent systems.
+            Building elegant mobile apps, web applications,  scalable APIs, and intelligent systems.
           </p>
         </div>
 
