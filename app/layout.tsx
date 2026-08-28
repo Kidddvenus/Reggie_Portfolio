@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Reggie Omondi | Full-Stack & AI Engineer",
     description:
-      "Building elegant cross-platform apps, scalable backends, and AI-powered systems.",
+      "Building elegant cross-platform apps, web apps,  scalable backends, and AI-powered systems.",
     type: "website",
   },
 };
