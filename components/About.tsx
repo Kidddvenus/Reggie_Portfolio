@@ -11,7 +11,7 @@ const FloatingSphere = dynamic(() => import("./canvas/FloatingSphere"), {
 });
 
 const stats = [
-  { icon: <Code2 size={20} />, value: "4+", label: "Years Experience" },
+  { icon: <Code2 size={20} />, value: "3+", label: "Years Experience" },
   { icon: <Globe size={20} />, value: "10+", label: "Projects Shipped" },
   { icon: <Cpu size={20} />, value: "3", label: "Core Stacks" },
   { icon: <Trophy size={20} />, value: "1st", label: "Tech Expo 2025" },
@@ -95,7 +95,7 @@ export default function About() {
             </motion.p>
 
             <motion.p className={styles.bio} variants={itemVariants}>
-              My flagship project <span className={styles.accent}>MyWallet</span> — a Kenyan
+              My flagship project <span className={styles.accent}>MyWallet</span>,a Kenyan
               digital wallet with real-time M-Pesa integration showcases my ability to
               design microservices architectures, implement secure auth flows, and deliver
               polished cross-platform experiences. I&apos;m also security-aware with a
